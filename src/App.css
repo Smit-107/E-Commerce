@@ -1,0 +1,162 @@
+.bg-blue{
+    background-color: #343A40;
+}
+  .cat::-webkit-scrollbar {
+    width: 10px; 
+  }
+  .cat::-webkit-scrollbar-track {
+    background-color: #343A40;
+  }
+  .cat::-webkit-scrollbar-thumb {
+    background-color: #494E53;
+    border-radius: 5px; 
+  }
+  .pp::-webkit-scrollbar {
+    width: 10px; 
+  }
+  .pp::-webkit-scrollbar-track {
+    background-color: rgba(128, 128, 128, 0.180);
+  }
+  .pp::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.280);
+    border-radius: 5px; 
+  }
+
+.categories-hover:hover{
+    background-color: #494E53;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.serch-call input:focus-visible{
+  border: 0 !important;
+  outline: none !important;
+}
+
+.product-title {
+  color: #1E2D42;
+}
+.product-description {
+  color: #374151;
+}
+.product-price {
+  color: #E11D48;
+  font-size: 1.5rem;
+}
+.product-rating {
+  color: #6B7280;
+}
+.product-highlight {
+  color: #4A90E2;
+}
+
+
+.stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: auto;
+  cursor: pointer;
+  content: "";
+  background-color: rgba(0,0,0,0);
+}
+
+.shadoww{
+  box-shadow: 0px 0px 10px gray;
+}
+
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 58.67px; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 400px;
+  z-index: 10;
+  height: 0;
+  background:transparent;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+
+/* Active state */
+.modal.active {
+  height: 206px;
+  align-items: center; /* Center vertically */
+  transition: height 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+/* Modal Content */
+.modal-content {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px;
+  height: 196px;
+  border-radius: 8px;
+  /* box-shadow: 0px 0px 10px black; */
+  transform: translateY(-100%);
+  animation: slideDown 0.3s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+/* <----  loader  ---->  */
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  width: 100%;
+  height: 50vh; /* You can adjust the height as needed */
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-top: 4px solid #000;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid #FF3D00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
